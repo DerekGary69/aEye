@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My App</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="fin.css">
+
+</head>
+<body>
+    <div id="main">
+        
+        <video id="viewfinder" class="d-none" autoplay></video>
+        <canvas id="canvas">
+            Your browser does not support the HTML5 canvas element.  
+        </canvas>
+        
+
+        <button id="captureBtn" class="btn btn-primary material-symbols-outlined">photo_camera</button>
+
+        
+        <div id="controls">
+            <button id="imgInputBtn" class="btn btn-primary material-symbols-outlined">upload</button>
+
+    
+            <input type="file" id="fileInput" accept="image/*" class="d-none">
+            <button id="toggleVfBtn" class="btn btn-primary material-symbols-outlined">toggle_oncamera</button>
+
+            <button id="viewBtn" class="btn btn-primary material-symbols-outlined" disabled>visibility</button>
+
+        </div>
+
+        <textarea id="vfPrompt" placeholder="Prompt for image viewer"></textarea>
+        <details open>
+            <summary>Enter your API key</summary>
+            <input type="password" id="keyInput" placeholder="Enter your API key">
+        </details>
+        <div id="aiResContainer" class="d-none">
+            <div id="viewSpinner" class="d-none spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div id="resDisp"></div>
+        </div>
+        
+    </div>
+    
+   
+    
+
+
+
+    <script type="module" src="common.js"></script>
+</body>
+</html>

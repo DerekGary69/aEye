@@ -1,0 +1,168 @@
+@media (prefers-color-scheme: dark) {
+    body {
+        /* Styles for dark color scheme */
+        background-color: black;
+        color: white;
+    }
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+input, textarea {
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+
+}
+
+textarea::placeholder {
+    color: rgb(194, 194, 194);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* height: 100svh; */
+    justify-content: flex-end;
+    padding: 0;
+    gap: .5em;
+    background-color: #acacac;
+    color: black;
+}
+
+
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 0;
+    /* height: 100svh; */
+    justify-content: flex-end;
+    /* width: 100%; */
+    border-radius: 1em;
+    overflow-y: scroll;
+    margin-bottom: 1em;
+
+    /* position: absolute;
+    bottom: 0;
+    margin-bottom: 1em; */
+
+}
+
+#controls {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    /* width: 100%; */
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1em;
+}
+
+/* #controls > * {
+    width: 100%;
+} */
+
+#captureBtn {
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    padding: 0;
+    font-size: 2em;
+}
+
+.toast {
+    position: fixed;
+    
+    z-index: 9999;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 1em;
+    top: 0;
+    right: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: toastIn 1s both;
+}
+
+.toastclose {
+    animation: toastOut 1s both;
+}
+
+@keyframes toastIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes toastOut {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+#viewfinder, canvas {
+    /* position: fixed;
+    top: 0;
+    z-index: -1; */
+    max-width: 100%;
+    width: max-content;
+    height: max-content;
+    max-height: 100%;
+    border-radius: 2em;
+    padding: 1em;
+}
+
+/* #resDisp {
+    padding: 1em;
+} */
+
+#aiResContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    border-radius: 1em;
+}
+
+textarea {
+    resize: both !important;
+}
+
+button {
+    border-radius: 1em;
+    font-size: 2.5em !important;
+}
